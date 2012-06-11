@@ -17,3 +17,5 @@ Functions using random number generators are not expected to work out of the box
 It is only necessary to run =make= when =Rmath.h= changes.
 
 Bugs and issues should be reported using the Github issue tracker.
+
+The most useful source of documentation is [[http://cran.r-project.org/doc/manuals/R-exts.html][Writing R Extensions]], in particular some sections in [[http://cran.r-project.org/doc/manuals/R-exts.html#Numerical-analysis-subroutines][Numerical analysis subroutines]].  Note however that only a small subset of the functions documented on that page are part of the standalone library.
