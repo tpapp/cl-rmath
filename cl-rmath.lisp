@@ -12,6 +12,7 @@
 (in-package :cl-rmath)
 
 (cffi:define-foreign-library librmath
+  (:darwin "libRmath.dylib")
   (:unix "libRmath.so")
   (t (:default "libRmath")))
 
