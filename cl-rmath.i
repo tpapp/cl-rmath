@@ -5,12 +5,16 @@
    give errors otherwise because of symbols exported previously. */
 
 %insert("lisphead") %{
-(defpackage #:cl-rmath
-  (:use #:cl)
-  (:nicknames #:rmath)
-  (:shadow #:fround))
+(in-package #:cl-user)
 
-(in-package :cl-rmath)
+(eval-when (:compile-toplevel :load-toplevel :execute)
+  (unless (find-package '#:cl-rmath)
+    (defpackage #:cl-rmath
+      (:use #:cl)
+      (:nicknames #:rmath)
+      (:shadow #:fround))))
+
+(in-package #:cl-rmath)
 
 (cffi:define-foreign-library librmath
   (:unix "libRmath.so")
