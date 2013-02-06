@@ -10,7 +10,7 @@ apt-get install r-mathlib
 #+END_EXAMPLE
 as root.
 
-The function names are preserved as they are.  Packages should not use the =cl-rmath= package, but refer to symbols using the =cl-rmath= or =rmath= package qualifiers (in fact, =fround= is in both =cl= and =cl-rmath=, so useing the package would require shadowing).
+The function names are preserved as they are.  Packages should not use the =cl-rmath= package, but refer to symbols using the =cl-rmath= or =rmath= package qualifiers (in fact, =fround= is in both =cl= and =cl-rmath=, so using the package would require shadowing).
 
 Functions using random number generators are not expected to work out of the box.
 
