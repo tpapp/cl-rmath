@@ -16,7 +16,6 @@
 (in-package #:cl-rmath)
 
 (cffi:define-foreign-library librmath
-  (:unix "libRmath.so")
   (t (:default "libRmath")))
 
 (cffi:use-foreign-library librmath)
@@ -49,7 +48,7 @@
                       ((cl:lower-case-p c)
                        (helper (cl:cdr lst) 'lower (cl:cons (cl:char-upcase c) rest)))
                       ((cl:digit-char-p c)
-                       (helper (cl:cdr lst) 'digit 
+                       (helper (cl:cdr lst) 'digit
                                (cl:case last
                                  ((upper lower) (cl:list* c #\- rest))
                                  (cl:t (cl:cons c rest)))))
@@ -1229,5 +1228,3 @@
  :int)
 
 (cl:export 'N01_kind)
-
-
